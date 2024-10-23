@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="{% static 'js/app.js' %}" async></script>
+    <title>Carrito de Compras | WalkWave</title>
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <div class="logo-titulo">
+                <a href="{% url 'index' %}">
+                    <h1>WalkWave</h1>
+                </a>
+            </div>
+            <nav id="nav">
+                <a href="{% url 'index' %}" class="selected">Inicio</a>
+                <a href="{% url 'contacto' %}">Contacto</a>
+                <span id="close-responsive"></span>
+            </nav>
+        </header>
+
+        <div class="contenedor-items">
+            <div class="item">
+                <span class="titulo-item">Nike Air Max 270</span>
+                <img src="{% static 'img/shoes1.png' %}" alt="" class="img-item">
+                <span class="precio-item">$200.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Zapatilla Jaguar</span>
+                <img src="{% static 'img/shoes2.png' %}" alt="" class="img-item">
+                <span class="precio-item">$350.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Zapatilla Air Max</span>
+                <img src="{% static 'img/shoes3.png' %}" alt="" class="img-item">
+                <span class="precio-item">$350.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Court Vision Low</span>
+                <img src="{% static 'img/shoes4.png' %}" alt="" class="img-item">
+                <span class="precio-item">$640.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Olympikus G</span>
+                <img src="{% static 'img/shoes5.png' %}" alt="" class="img-item">
+                <span class="precio-item">$170.999</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Topper X Force</span>
+                <img src="{% static 'img/shoes6.png' %}" alt="" class="img-item">
+                <span class="precio-item">$240.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+        </div>
+
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
+
+            <div class="carrito-items"></div>
+
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total">$0</span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i></button>
+        </div>
+    </div>
+</body>
+</html>

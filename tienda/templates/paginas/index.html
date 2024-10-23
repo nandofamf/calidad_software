@@ -1,0 +1,147 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>WalkWave</title>
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <div class="logo-titulo">
+                <a href="{% url 'index' %}">
+                    <h1>WalkWave</h1>
+                </a>
+            </div>
+            <nav id="nav">
+                <a href="{% url 'index' %}" class="selected">Inicio</a>
+                <a href="{% url 'contacto' %}">Contacto</a>
+                <span id="close-responsive">
+                    <i class="fa-solid fa-xmark"></i>
+                </span>
+            </nav>
+            <div id="nav-responsive">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="carrito">
+                <span class="total-compra"></span>
+                <a href="{% url 'carrito' %}">
+                    <span class="icono-carrito">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <div class="total-item-carrito">0</div>
+                    </span>
+                </a>
+            </div>
+        </header>
+
+        <section class="contenedor-seccion">
+            <div class="fondo-seccion"></div>
+
+            <section id="inicio" class="inicio">
+                <div class="col">
+                    <h2 class="titulo-inicio">Encuentra las zapatillas <br> que buscas al mejor precio</h2>
+                    <div class="buscador">
+                        <input type="text" placeholder="¿Qué estás buscando?">
+                        <span class="btn-buscar"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    </div>
+                </div>
+                <div class="col derecha">
+                    <div class="contenedor-img">
+                        <img src="{% static 'img/shoes5.png' %}" alt="Imagen de zapatillas" class="imagen-destacada">
+                    </div>
+                </div>
+            </section>
+            <section id="productos" class="productos">
+                <h2 class="titulo-productos">Nuestros Productos</h2>
+                <div class="fila">
+                    <div class="col fondo-dots">
+                        <a href="{% url 'producto1' %}">
+                            <div class="contenido">
+                                <div class="fondo orange">
+                                    <div class="circulo"></div>
+                                </div>
+                                <img src="{% static 'img/shoes1.png' %}" alt="Nike Air Max 270">
+                                <h2 class="titulo-item">Nike Air Max 270</h2>
+                                <h3 class="precio-item">$200.000</h3>
+                                <button class="boton-item">Ver Producto</button>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col fondo-dots">
+                        <a href="{% url 'producto2' %}">
+                            <div class="contenido">
+                                <div class="fondo blue">
+                                    <div class="circulo"></div>
+                                </div>
+                                <img src="{% static 'img/shoes2.png' %}" alt="Zapatillas Jaguar">
+                                <h2 class="titulo-item">Zapatillas Jaguar</h2>
+                                <h3 class="precio-item">$350.000</h3>
+                                <button class="boton-item">Ver Producto</button>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col fondo-dots">
+                        <a href="{% url 'producto3' %}">
+                            <div class="contenido">
+                                <div class="fondo green">
+                                    <div class="circulo"></div>
+                                </div>
+                                <img src="{% static 'img/shoes3.png' %}" alt="Zapatillas Entrenamiento Nike Air Max">
+                                <h2 class="titulo-item">Zapatillas Nike Air Max</h2>
+                                <h3 class="precio-item">$350.000</h3>
+                                <button class="boton-item">Ver Producto</button>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="fila">
+                    <div class="col fondo-dots">
+                        <a href="{% url 'producto4' %}">
+                            <div class="contenido">
+                                <div class="fondo green">
+                                    <div class="circulo"></div>
+                                </div>
+                                <img src="{% static 'img/shoes4.png' %}" alt="Nike Court Vision Low">
+                                <h2 class="titulo-item">Nike Court Vision Low</h2>
+                                <h3 class="precio-item">$640.000</h3>
+                                <button class="boton-item">Ver Producto</button>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col fondo-dots">
+                        <a href="{% url 'producto5' %}">
+                            <div class="contenido">
+                                <div class="fondo orange">
+                                    <div class="circulo"></div>
+                                </div>
+                                <img src="{% static 'img/shoes5.png' %}" alt="Olympikus G Dínamo Mujer">
+                                <h2 class="titulo-item">Olympikus G Dínamo Mujer</h2>
+                                <h3 class="precio-item">$170.999</h3>
+                                <button class="boton-item">Ver Producto</button>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col fondo-dots">
+                        <a href="{% url 'producto6' %}">
+                            <div class="contenido">
+                                <div class="fondo blue">
+                                    <div class="circulo"></div>
+                                </div>
+                                <img src="{% static 'img/shoes6.png' %}" alt="Topper X Force (Cf)">
+                                <h2 class="titulo-item">Topper X Force (Cf)</h2>
+                                <h3 class="precio-item">$240.000</h3>
+                                <button class="boton-item">Ver Producto</button>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

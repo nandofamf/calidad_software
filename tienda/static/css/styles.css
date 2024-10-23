@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #4a90e2, #81b4d1); /* Degradado de azul más suave */
+}
+
+/* Contenedor General */
+.contenedor {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 40px;
+    background-color: #f3f3f3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra ligera para resaltar el contenedor */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #4a90e2; /* Azul más suave */
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem; /* Aumentar el tamaño del título */
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #ffdd57; /* Efecto hover en los enlaces */
+}
+
+header .carrito .total-item-carrito {
+    background-color: #ffcd39;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 14px;
+    color: #000;
+}
+
+/* Sección de Inicio */
+.inicio {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.titulo-inicio {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Sección de Productos */
+.productos {
+    margin-top: 40px;
+}
+
+.productos h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.fila {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.col {
+    flex: 1;
+    padding: 15px;
+}
+
+.col.fondo-dots {
+    position: relative;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Aumentar sombra para más profundidad */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transición para el hover */
+}
+
+.col.fondo-dots:hover {
+    transform: translateY(-5px); /* Efecto hover: levantar el producto */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada al hacer hover */
+}
+
+.contenido {
+    text-align: center;
+    padding: 20px;
+}
+
+.contenido img {
+    max-width: 90%; /* Aumentar el tamaño de la imagen */
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-weight: bold;
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.boton-item {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.boton-item:hover {
+    background-color: #3a70c2; /* Cambiar el color del botón al hacer hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Añadir sombra al botón */
+}
+
+/* Reseñas */
+.seccion-resenas h3 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+/* Botón de enviar reseña */
+#enviar-resena {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#enviar-resena:hover {
+    background-color: #3a70c2;
+}
+
+/* Sección responsive */
+@media screen and (max-width: 850px) {
+    .fila {
+        flex-direction: column;
+    }
+    .col {
+        margin-bottom: 20px;
+    }
+}
