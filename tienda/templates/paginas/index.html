@@ -18,14 +18,8 @@
             </div>
             <nav id="nav">
                 <a href="{% url 'index' %}" class="selected">Inicio</a>
-                <a href="{% url 'contacto' %}">Contacto</a>
-                <span id="close-responsive">
-                    <i class="fa-solid fa-xmark"></i>
-                </span>
-            </nav>
-            <div id="nav-responsive">
-                <i class="fa-solid fa-bars"></i>
-            </div>
+               
+                
             <div class="carrito">
                 <span class="total-compra"></span>
                 <a href="{% url 'carrito' %}">
@@ -66,7 +60,7 @@
                                 <img src="{% static 'img/shoes1.png' %}" alt="Nike Air Max 270">
                                 <h2 class="titulo-item">Nike Air Max 270</h2>
                                 <h3 class="precio-item">$200.000</h3>
-                                <button class="boton-item">Ver Producto</button>
+                                <a href="{% url 'producto1' %}" class="boton-personalizado">Ver producto</a>
                             </div>
                         </a>
                     </div>
@@ -79,7 +73,7 @@
                                 <img src="{% static 'img/shoes2.png' %}" alt="Zapatillas Jaguar">
                                 <h2 class="titulo-item">Zapatillas Jaguar</h2>
                                 <h3 class="precio-item">$350.000</h3>
-                                <button class="boton-item">Ver Producto</button>
+                                <a href="{% url 'producto2' %}" class="boton-personalizado">Ver producto</a>
                             </div>
                         </a>
                     </div>
@@ -89,10 +83,10 @@
                                 <div class="fondo green">
                                     <div class="circulo"></div>
                                 </div>
-                                <img src="{% static 'img/shoes3.png' %}" alt="Zapatillas Entrenamiento Nike Air Max">
+                                <img src="{% static 'img/shoes3 (1).png' %}" alt="Zapatillas Entrenamiento Nike Air Max">
                                 <h2 class="titulo-item">Zapatillas Nike Air Max</h2>
                                 <h3 class="precio-item">$350.000</h3>
-                                <button class="boton-item">Ver Producto</button>
+                                <a href="{% url 'producto3' %}" class="boton-personalizado">Ver producto</a>
                             </div>
                         </a>
                     </div>
@@ -107,7 +101,7 @@
                                 <img src="{% static 'img/shoes4.png' %}" alt="Nike Court Vision Low">
                                 <h2 class="titulo-item">Nike Court Vision Low</h2>
                                 <h3 class="precio-item">$640.000</h3>
-                                <button class="boton-item">Ver Producto</button>
+                                <a href="{% url 'producto4' %}" class="boton-personalizado">Ver producto</a>
                             </div>
                         </a>
                     </div>
@@ -120,7 +114,7 @@
                                 <img src="{% static 'img/shoes5.png' %}" alt="Olympikus G Dínamo Mujer">
                                 <h2 class="titulo-item">Olympikus G Dínamo Mujer</h2>
                                 <h3 class="precio-item">$170.999</h3>
-                                <button class="boton-item">Ver Producto</button>
+                                <a href="{% url 'producto5' %}" class="boton-personalizado">Ver producto</a>
                             </div>
                         </a>
                     </div>
@@ -133,7 +127,7 @@
                                 <img src="{% static 'img/shoes6.png' %}" alt="Topper X Force (Cf)">
                                 <h2 class="titulo-item">Topper X Force (Cf)</h2>
                                 <h3 class="precio-item">$240.000</h3>
-                                <button class="boton-item">Ver Producto</button>
+                                <a href="{% url 'producto6' %}" class="boton-personalizado">Ver producto</a>
                             </div>
                         </a>
                     </div>

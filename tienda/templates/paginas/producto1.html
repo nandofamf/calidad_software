@@ -22,15 +22,6 @@
             <nav id="nav">
                
                 <a href="{% url 'index' %}" class="selected">Inicio</a>
-               
-                <a href="{% url 'contacto' %}">Contacto</a>
-                <span id="close-responsive">
-                    <i class="fa-solid fa-xmark"></i>
-                </span>
-            </nav>
-            <div id="nav-responsive">
-                <i class="fa-solid fa-bars"></i>
-            </div>
             <div class="carrito">
                 <span class="total-compra"></span>
               
@@ -52,53 +43,35 @@
                 <div class="centro">
                     <h2>Detalle del Producto</h2>
                 </div>
-                <div class="col busqueda">
+                <div class="flecha-visible">
                    
-                    <a href="{% url 'producto2' %}">
-                        <i class="fa-solid fa-arrow-right"></i>
+                    <a href="{% url 'producto2' %}" class="flecha-visible">
+                        <i class="fas fa-arrow-right"></i> 
                     </a>
                 </div>
             </div>
 
-            <section class="detalle-producto">
-                <div class="fila">
-                    <div class="col izquierda">
-                        <h3>Nike Air Max 270 to Chuck Taylors</h3>
-                        <p>La Nike Air Max 270 combina lo mejor de la tecnología moderna con el diseño icónico de la línea Air Max. Este modelo está inspirado en las versiones clásicas de Air Max 180 y Air Max 93, 
-                            pero lleva la amortiguación a un nuevo nivel con su unidad Air visible de 270 grados, que ofrece una comodidad superior en cada paso.</p>
-                        <div class="miniaturas">
-                          
-                            <img src="{% static 'img/mini-shoes1.png' %}" alt="" class="mini-selected" onclick="setMini('0')">
-                        </div>
-                    </div>
-                    <div class="col centro">
-                        <div class="img-producto" id="img-producto">
-                            <img src="{% static 'img/shoes1.png' %}" alt="" id="imgProducto">
-                            <h3 class="precio-producto">$35,000.00</h3>
-                        </div>
-                    </div>
-                    <div class="col derecha">
-                        <div class="info-detalle">
-                            Review:
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            4.5 (60)
-                        </div>
-                        
-                        <div class="info-detalle">
-                            Size:
-                            <button class="size-selected" onclick="setSize(0)">39</button>
-                        </div>
-
-                      
-                        <button class="btn-agregar-carrito" onclick="window.location.href='{% url 'carrito' %}'">Ir a carrito</button>
-                    </div>
-                </div>
-            </section>
-
+            <div class="container my-5">
+    <!-- Sección del producto con Bootstrap -->
+    <div class="row align-items-center bg-light p-5 rounded shadow-sm">
+        <!-- Columna de la descripción del producto -->
+        <div class="mi-row">
+            <div class="mi-columna">
+                <h2 class="mi-titulo">Nike Air Max 270 to Chuck Taylors</h2>
+                <p class="mi-texto">
+                    La Nike Air Max 270 combina lo mejor de la tecnología moderna con el diseño icónico de la línea Air Max.
+                    Este modelo está inspirado en las versiones clásicas de Air Max 180 y Air Max 93, pero lleva la amortiguación
+                    a un nuevo nivel con su unidad Air visible de 270 grados, que ofrece una comodidad superior en cada paso.
+                </p>
+            </div>
+            <div class="mi-columna">
+                <!-- Aquí puedes agregar la imagen u otros detalles del producto -->
+                <img src="{% static 'img/shoes1.png' %}" alt="Nike Air Max 270" style="max-width: 100%;">
+            </div>
+            <a href="{% url 'carrito' %}" class="boton-personalizado">Ir a carrito</a>
+        </div>
+        </div>
+        
         
             <section class="seccion-resenas">
                 <h3>Reseñas</h3>

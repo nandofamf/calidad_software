@@ -106,3 +106,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Ruta para archivos cargados por 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / "static"]
